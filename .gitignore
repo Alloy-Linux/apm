@@ -1,0 +1,7 @@
+/.idea
+/.vscode
+/.venv
+settings.json
+
+/__pycache__
+/rebuild_logs
