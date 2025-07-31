@@ -55,4 +55,4 @@ python main.py uninstall <package-name>
 
 ## How to Help
 
-Want to help make APM better? You can report bugs or suggest new ideas by opening an issue on the project's page.
+Want to help make APM better? You can report bugs or suggest new ideas by opening an issue on the GitHub page.
