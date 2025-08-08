@@ -2,7 +2,7 @@ import subprocess
 import sys
 from .settings import load_settings, get_user_home
 
-def rebuild_system(method: str = None):
+def rebuild(method: str = None):
     settings = load_settings()
     method = method or settings.get("default_install_method")
     rebuild_command = settings.get("rebuild_command")

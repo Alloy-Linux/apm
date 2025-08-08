@@ -33,24 +33,32 @@ python main.py settings
 
 ### Add a Program
 
-To install a new program, just tell APM to `install` it:
+To install a new program, just tell APM to `add` it:
 
 ```bash
-python main.py install <package-name>
+python main.py add <package-name>
 ```
 
 If you want to use a specific method (like `flatpak` instead of your default), you can do this:
 
 ```bash
-python main.py install <package-name> --method flatpak
+python main.py add <package-name> --method flatpak
 ```
 
 ### Remove a Program
 
-To get rid of a program, use the `uninstall` command:
+To get rid of a program, use the `remove` command:
 
 ```bash
-python main.py uninstall <package-name>
+python main.py remove <package-name>
+```
+
+### Rebuild the System
+
+After adding or removing programs, you need to rebuild your system for the changes to take effect:
+
+```bash
+python main.py rebuild
 ```
 
 ## How to Help

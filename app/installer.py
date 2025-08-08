@@ -5,7 +5,7 @@ from pathlib import Path
 
 from .settings import load_settings, get_user_home
 
-def install(pkg_name: str, method: str = None):
+def add(pkg_name: str, method: str = None):
     settings = load_settings()
     method = method or settings.get("default_install_method")
     user_home = get_user_home()
@@ -235,7 +235,7 @@ def install(pkg_name: str, method: str = None):
             sys.stderr.write(f"Failed to write changes to {flatpak_file_path}: {e}\n")
             return
 
-def uninstall(pkg_name: str, method: str = None):
+def remove(pkg_name: str, method: str = None):
     settings = load_settings()
     method = method or settings.get("default_install_method")
     user_home = get_user_home()
