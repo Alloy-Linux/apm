@@ -1,9 +1,9 @@
 import argparse
 import sys
-from app.installer import add, remove
-from app.rebuild import rebuild
-from app.settings import initialize_settings
-from app.edit_settings import edit_settings
+from .installer import add, remove
+from .rebuild import rebuild
+from .settings import initialize_settings
+from .edit_settings import edit_settings
 
 def main():
     initialize_settings()
