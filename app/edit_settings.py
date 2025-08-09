@@ -1,5 +1,7 @@
 import json
-from .settings import SETTINGS_PATH, load_settings
+
+from app.settings import load_settings, SETTINGS_PATH
+
 
 def edit_settings():
     settings = load_settings()
