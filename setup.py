@@ -7,7 +7,7 @@ setup(
     install_requires=[],
     entry_points={
         "console_scripts": [
-            "apm = main:main",
+            "apm = app.main:main",
         ],
     },
 )
