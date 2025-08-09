@@ -4,7 +4,7 @@ import os
 import sys
 import pwd
 
-SETTINGS_PATH = Path(__file__).parent.parent / "settings.json"
+SETTINGS_PATH = Path(get_user_home()) / ".config" / "apm" / "settings.json"
 
 def get_user_home():
     if os.geteuid() == 0:
@@ -34,6 +34,7 @@ DEFAULT_SETTINGS = {
 
 def initialize_settings():
     if not SETTINGS_PATH.exists():
+        SETTINGS_PATH.parent.mkdir(parents=True, exist_ok=True)
         print(f"Creating default settings file at {SETTINGS_PATH}")
         with open(SETTINGS_PATH, "w") as f:
             json.dump(DEFAULT_SETTINGS, f, indent=4)
@@ -55,6 +56,7 @@ def initialize_settings():
 
         
 
+        SETTINGS_PATH.parent.mkdir(parents=True, exist_ok=True)
         with open(SETTINGS_PATH, "w") as f:
             json.dump(data, f, indent=4)
 
