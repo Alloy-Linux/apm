@@ -4,8 +4,6 @@ import os
 import sys
 import pwd
 
-SETTINGS_PATH = Path(get_user_home()) / ".config" / "apm" / "settings.json"
-
 def get_user_home():
     if os.geteuid() == 0:
 
@@ -18,6 +16,11 @@ def get_user_home():
             return Path(f"/home/{sudo_user}")
 
     return Path.home()
+
+
+SETTINGS_PATH = Path(get_user_home()) / ".config" / "apm" / "settings.json"
+
+
 
 
 DEFAULT_SETTINGS = {
